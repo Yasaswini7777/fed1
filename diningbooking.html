@@ -1,0 +1,97 @@
+
+
+<html>
+<head>
+<title> form </title>
+<script>
+function validate()
+{
+var vname=3Ddocument.reg.form.vname;
+var nom=3Ddocument.reg.form.nom;
+var phone =3D document.reg.form.phone;
+var phoneNum =3D /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+var emailAddr=3Ddocument.reg.form.emailAddr;
+var tof=3Ddocument.reg.form.tof;
+var roomstatus=3Ddocument.reg.form.roomstatus;
+if(vname.value.length<=3D0)
+{
+alert("Name is required");
+vname.focus();
+return false;
+}
+if(nom.value.length<=3D0)
+{
+alert("Number of members must be 2");
+nom.focus();
+return false;
+}
+if(phone.value.match(phoneNum)) {
+return true;
+}
+else {
+document.getElementById("phone").className =3D document.getElementById("pho=
+ne").className + " error";
+return false;
+}
+if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(myForm.emailAddr.v=
+alue))
+{
+return (true);
+}
+alert("You have entered an invalid email address!")
+if(tof.value.length<=3D0)
+{
+alert("type of food is required");
+tof.focus();
+return false;
+}
+if(rooms.value.length<=3D0)
+{
+alert("rooms type is required");
+rooms.focus();
+return false;
+}
+return false;
+}
+</script>
+</head>
+<body>
+<form method=3D"action" name=3D"reg.form" onsubmit=3D"return validate()">
+<lable> Visitor name:</lable>
+<input type=3D"text" name=3D"vname">
+<br>
+<lable> Number Of Members:</lable>
+<input type=3D"number" size=3D"2" name=3D"nom">
+<br>
+<lable> Contact Number:</lable>
+<input type=3D"Number" name=3D"phone">
+<br>
+<lable> Email:</lable>
+<input type=3D"email" name=3D"emailAddr">
+<br>
+<lable> Tyoe Of Food:</lable>
+<input type=3D"radio" name=3D"tof" value=3D"southIndian"> SouthIndian
+<input type=3D"radio" name=3D"tof" value=3D"northIndian"> NorthIndian
+<input type=3D"radio" name=3D"tof" value=3D"chinese">Chinese
+<input type=3D"radio" name=3D"tof" value=3D"western"> Western
+<br>
+<lable> Room Status:</lable>
+<input type=3D"radio" name=3D"rooms" value=3D"ac"> AC
+<input type=3D"radio" name=3D"rooms" value=3D"non-ac"> NON-AC
+<br>
+<label for=3D"venue">Venue:</label>
+<select name=3D"Venue">
+    <option value=3D"Arena">Arena</option>
+    <option value=3D"Fiesta">Fiesta</option>
+    <option value=3D"Vista">Vista</option>
+    <option value=3D"Mythri">Mythri</option>
+    <option value=3D"Magna">Magna</option>
+    <option value=3D"Oasis">Oasis</option>
+    <option value=3D"Amoeba" disabled>Amoeba</option>
+</select>
+<br>
+<input type=3D"submit" value=3D"Book">
+<input type=3D"reset" value=3D"Reset">
+</form>
+</body>
+</html>

@@ -1,0 +1,93 @@
+
+<html>
+
+<head>
+    <title>Chess board</title>
+    <style>
+        body {
+            text-align: center;   
+        }
+
+        .cell {
+            height: 30px;
+            width: 30px;
+
+        }
+
+        .pinkcell {
+            background-color:pink;
+        }
+
+        .orangecell {
+            background-color: orange;
+        }
+        .redcell {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <span style=3D"color:black; font-size:30px;">
+        Color checkerbox
+    </span>
+    <br><br>
+
+    <script type=3D"text/javascript">
+
+
+        var center =3D document.createElement('center');
+
+
+        var ChessTable =3D document.createElement('table');
+        for (var i =3D 0; i < 6; i++) {
+
+
+            var tr =3D document.createElement('tr');
+            for (var j =3D 0; j < 6; j++) {
+
+
+                var td =3D document.createElement('td');
+
+
+                if ((i + j) % 3 =3D=3D 0) {
+
+
+                    td.setAttribute('class', 'cell orangecell');
+                    tr.appendChild(td);
+                }
+
+
+                else if ((i+j-1)%3=3D=3D0)
+                {
+                      td.setAttribute('class','cell redcell');
+                      tr.appendChild(td);
+                }
+
+
+
+                else {
+
+                    td.setAttribute('class','cell pinkcell');
+                    tr.appendChild(td);
+                }
+            }
+
+
+            ChessTable.appendChild(tr);
+        }
+        center.appendChild(ChessTable);
+
+
+        ChessTable.setAttribute('cellspacing', '0');
+        ChessTable.setAttribute('width', '270px');
+        document.body.appendChild(center);
+    </script>
+</body>
+
+</html>
+
+
+
+
+

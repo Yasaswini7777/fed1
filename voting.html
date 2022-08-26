@@ -1,0 +1,103 @@
+  
+	<html>    
+	<head>    
+	    <title>Reg Form</title>    
+	       
+	    <script>    
+	        function validate() {    
+	            var fname = document.reg_form.fname;    
+	            var lname = document.reg_form.lname;    
+	            var address = document.reg_form.address;    
+	            var gender = document.reg_form.gender;    
+	            var email = document.reg_form.email;    
+	            var mobile = document.reg_form.mobile;    
+	            var course = document.reg_form.course;    
+	   
+	            if (fname.value.length <= 0) {    
+	                alert("Name is required");    
+	                fname.focus();    
+	                return false;    
+	            }    
+	            if (lname.value.length <= 0) {    
+	                alert("Last Name is required");    
+	                lname.focus();    
+	                return false;    
+	            }    
+	            if (address.value.length <= 0) {    
+	                alert("Address is required");    
+	                address.focus();    
+	                return false;    
+	            }    
+	            if (gender.value.length <= 0) {    
+	                alert("Gender is required");    
+	                gender.focus();    
+	                return false;    
+	            }    
+	            if (age.value.length <= 0) {    
+	                alert("age is required");    
+	                age.focus();    
+	                return false;    
+	            }    
+	            if (adhar.value.length <= 0) {    
+	                alert("adhar number is required");    
+	                adhar.focus();    
+	                return false;    
+	            }    
+	             
+	            return false;    
+	        }      
+	    </script>    
+	</head>    
+	<body>    
+	    <form method="" action="" name="reg_form" onsubmit="return validate()">    
+	        <h2> voter id Form</h2>    
+	        <table>    
+	            <tr>    
+	                <td><label>First Name: </label></td>    
+	                <td>    
+	                    <input type="text" name="fname" placeholder="First Name">    
+	                </td>    
+	            </tr>    
+	            <tr>    
+	                <td><label>Last Name: </label></td>    
+	                <td>    
+	                    <input type="text" name="lname" placeholder="Last Name">    
+	                </td>    
+	            </tr>    
+	            <tr>    
+	                <td><label>Address: </label></td>    
+	                <td>    
+	                    <input type="textarea" size="50" name="address" placeholder="Address">    
+	                </td>    
+	            </tr>    
+	            <tr>    
+	                <td><label>Gender: </label></td>    
+	                <td>    
+	                    <input type="radio" name="gender" value="male">Male    
+	                    <input type="radio" name="gender" value="femele">Female    
+	                </td>    
+	            </tr>    
+	            <tr>    
+	                <td><label>Age: </label></td>    
+	                <td>    
+	                    <input type="number" name="age">    
+	                </td>    
+	            </tr>    
+	            <tr>    
+	                <td><label>Adhar: </label></td>    
+	                <td>    
+	                    <input type="number" name="adhar">    
+	                </td>    
+	            </tr>    
+	           
+	            <tr>    
+	                <td>    
+	                    <input type="submit" name="submit" value="Submit">    
+	                    <input type="reset" name="reset" value="Reset">    
+	                </td>    
+	            </tr>            
+	        </table>    
+	    </form>    
+	</body>    
+	</html> 
+
